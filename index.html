@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CryptoJs</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        height: 100vh;
+        background-color: darkgray;
+    }
+
+    .container {
+        width: 50%;
+        height: calc(100% - 34px);
+        padding: 15px;
+    }
+
+    .container button, .container input {
+        display: inline-block;
+        padding: 4px 8px;
+        border: 1px;
+        margin-bottom: 5px;
+    }
+
+    .container textarea {
+        width: 100%;
+        height: calc(100% - 34px);
+    }
+</style>
+<body>
+<div class="container">
+    <button id="btnEncrypt">Encrypt</button>
+    <input type="text" id="keyEncrypt" placeholder="key">
+    <textarea id="textEncrypt" cols="30" rows="10"></textarea>
+</div>
+<div class="container">
+    <button id="btnDecrypt">Decrypt</button>
+    <input type="text" id="keyDecrypt" placeholder="key">
+    <textarea id="textDecrypt" cols="30" rows="10"></textarea>
+</div>
+<script src="crypto-js.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
