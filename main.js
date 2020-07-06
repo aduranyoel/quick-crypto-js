@@ -8,13 +8,17 @@ const textDecrypt = document.getElementById('textDecrypt');
 
 btnEncrypt.addEventListener('click', () => {
     console.log(textEncrypt.value, keyEncrypt.value);
-    textDecrypt.value = encrypt(textEncrypt.value, keyEncrypt.value);
+    const data = encrypt(textEncrypt.value, keyEncrypt.value);
+    console.log(data);
+    textDecrypt.value = data
 
 });
 
 btnDecrypt.addEventListener('click', () => {
     console.log(textDecrypt.value, keyDecrypt.value);
-    textEncrypt.value = decrypt(textDecrypt.value, keyDecrypt.value);
+    const data = decrypt(textDecrypt.value, keyDecrypt.value);
+    console.log(data);
+    textEncrypt.value = data;
 });
 
 function encrypt(value, key) {
