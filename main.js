@@ -9,7 +9,10 @@ const textDecrypt = document.getElementById('textDecrypt');
 btnEncrypt.addEventListener('click', () => {
     console.log(textEncrypt.value, keyEncrypt.value);
     const data = encrypt(textEncrypt.value, keyEncrypt.value);
-    console.log(data);
+    console.table({
+    'encrypt': data,
+    'decrypt': textEncrypt.value
+    });
     textDecrypt.value = data
 
 });
@@ -17,7 +20,10 @@ btnEncrypt.addEventListener('click', () => {
 btnDecrypt.addEventListener('click', () => {
     console.log(textDecrypt.value, keyDecrypt.value);
     const data = decrypt(textDecrypt.value, keyDecrypt.value);
-    console.log(data);
+    console.table({
+    'encrypt': textDecrypt.value,
+    'decrypt': data
+    });
     textEncrypt.value = data;
 });
 
